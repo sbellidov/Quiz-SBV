@@ -5,7 +5,7 @@ var quizController = require('../controllers/quiz_controller');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Quiz: El juego de las preguntas y las respuestas' });
+  res.render('index', { title: 'Quiz' });
 });
 
 router.get('/quizes/question', quizController.question);
