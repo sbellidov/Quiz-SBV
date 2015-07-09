@@ -1,8 +1,39 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+   margin:  0px;
+   padding: 0px;
+   font-family: Helvetica, sans-serif;
+}
+
+#page-wrap {
+   margin: 2% auto;
+   color: cadetblue;
+}
+
+#page-wrap > .main {
+   border: 1px solid #999;
+   padding: 1%;
+   margin-bottom: 1px;
+   color: black;
+}
+
+section > div {
+   padding: 20px;
 }
 
 a {
   color: #00B7FF;
+}
+
+header, nav, section {
+   background: #eee;
+   text-align: center;
+}
+
+nav span {
+   margin: 0px 10px 0px 0px;
+}
+
+footer {
+   background-color: aliceblue;
+   text-align:       center;
 }
