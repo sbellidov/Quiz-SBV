@@ -1,3 +1,5 @@
+/* HOJA DE ESTILOS PRINCIPAL --- style.css */
+
 * {
    margin:  0px;
    padding: 0px;
@@ -20,20 +22,69 @@ section > div {
    padding: 20px;
 }
 
-a {
-  color: #00B7FF;
-}
-
 header, nav, section {
    background: #eee;
    text-align: center;
 }
 
-nav span {
-   margin: 0px 10px 0px 0px;
+
+
+
+/* --- Formato del formulario --- */
+input {
+   padding: 5px;
+   margin: 5px;
 }
 
+.form_button {
+   padding: 5px 7px;
+   margin: 5px;
+   background-color: #eee;
+   border: 1px solid black;
+   border-radius: 5px;
+}
+
+.form_button:hover {
+   border-color: blueviolet;
+}
+/* ------------------------------ */
+
+
+
+
+
+/* --------- Menú de navegación --------- NAV --------- */
+nav ul {
+   list-style-type: none;
+}
+
+nav ul li {
+   display: inline-block;
+   margin: 2px;
+   padding: 2px;
+}
+
+nav ul li a:link, nav ul li a:visited {
+   display: block;
+   width: 100px;
+   color: #FFFFFF;
+   background-color: darkgrey;
+   text-align: center;
+   padding: 5px;
+   text-decoration: none;
+}
+
+nav ul li a:hover, nav ul li a:active {
+   background-color: blueviolet;
+}
+/* ---------------------------------------------------- */
+
+
+
+
+/* ------- Menú de pie de página ------- FOOTER ------- */
 footer {
    background-color: aliceblue;
    text-align:       center;
 }
+/* ---------------------------------------------------- */
