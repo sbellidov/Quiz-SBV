@@ -16,7 +16,7 @@ var storage = process.env.DATABASE_STORAGE;
 var Sequelize = require('sequelize');
 
 // Usar BBDD SQLite o Postgress
-var sequelize = new Sequelize(DB_name, user, pwd, {
+var sequelize = new Sequelize (DB_name, user, pwd, {
    dialect:    protocol,
    protocol:   protocol,
    port:       port,
@@ -37,14 +37,14 @@ var Quiz = sequelize.import(path.join(__dirname,'quiz'));
 exports.Quiz = Quiz // exportar definición de tabla Quiz
 
 // sequelize.sync() crea e inicializa tabla de preguntas en DB
-sequelize.sync().success(function() {
+sequelize.sync().then(function() {
    // success (..) ejecuta el manejador una vez creada la tabla
-   Quiz.count().success(function (count){
+   Quiz.count().then(function (count){
       if (count === 0) {
          Quiz.create({  pregunta:   "Capital de Italia",
                         respuesta:  "Roma"
                      })
-         .success(function(){console.log('Base de datos inicializada')});
+         .then(function(){console.log('Base de datos inicializada')});
       };
    });
 });
