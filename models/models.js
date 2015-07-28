@@ -1,5 +1,8 @@
 var path = require('path');
 
+// Cargar Modelo ORM
+var Sequelize = require('sequelize');
+
 // Postgres DATABASE_URL = postgres:((user:passwd@host:port/database
 // SQLite   DATABASE_URL = sqlite://:@:/
 var url = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
@@ -12,13 +15,10 @@ var port    = (url[5]||null);
 var host    = (url[4]||null);
 var storage = process.env.DATABASE_STORAGE;
 
-// Cargar Modelo ORM
-var Sequelize = require('sequelize');
 
 // Usar BBDD SQLite o Postgress
-var sequelize = new Sequelize (DB_name, user, pwd,
-{
-   dialect:    protocol,
+var sequelize = new Sequelize(DB_name, user, pwd,
+{  dialect:    protocol,
    protocol:   protocol,
    port:       port,
    host:       host,
