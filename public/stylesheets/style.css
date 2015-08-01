@@ -51,6 +51,25 @@ input {
 
 
 
+/*------------ Tabla -------------*/
+table {
+   text-align: center;
+   margin: 0 auto;
+}
+
+table a {
+   text-decoration: none;
+}
+table a:link, table a:visited {
+   color: black;
+}
+table a:hover, table a:active{
+   color: blueviolet;
+}
+
+/*--------------------------------*/
+
+
 
 
 /* --------- Menú de navegación --------- NAV --------- */
