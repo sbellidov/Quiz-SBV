@@ -27,7 +27,13 @@ header, nav, section {
    text-align: center;
 }
 
+/* Mensajes de error de formularios en SECTIONS */
 
+#ErrorMsg {
+   margin: 0px 10px 0px 0px;
+   color: darkred;
+   font-size: smaler;
+}
 
 
 /* --- Formato del formulario --- */
