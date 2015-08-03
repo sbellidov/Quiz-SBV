@@ -14,6 +14,16 @@
        value="<%= quiz.respuesta %>"
 /><p>
 
+<select name="quiz[tema]">
+   <option value="">Selecione...</option>
+   <option value="Humanidades" <% if (quiz.tema==="Humanidades"){ %> selected <% } %> >Humanidades</option>
+   <option value="Ocio" <% if (quiz.tema==="Ocio"){ %> selected <% } %>>Ocio</option>
+   <option value="Ciencia" <% if (quiz.tema==="Ciencia"){ %> selected <% } %>>Ciencia</option>
+   <option value="Tecnologia" <% if (quiz.tema==="Tecnologia"){ %> selected <% } %>>Tecnología</option>
+   <option value="Otros" <% if (quiz.tema==="Otros"){ %> selected <% } %>>Otros</option>
+</select>
+<p>
+
 
 <a href="/quizes">
    <button
