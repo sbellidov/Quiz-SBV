@@ -59,12 +59,8 @@ select {
    padding: 5px;
    margin: 5px;
    width: 120px;
-   line-height: 1.5;
 }
 
-option {
-   line-height: 1.5;
-}
 
 /* ------------------------------ */
 
