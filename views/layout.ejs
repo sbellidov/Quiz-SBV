@@ -25,8 +25,16 @@
       
       <div id="page-wrap">
          
-         
          <header class="main" id="h1">
+            
+            <div class="login">
+               <% if (!session.user) { %>
+                  <a href="/login">Login</a>
+               <% } else { %>
+                  <a href="" id="username"><%=session.user.username%></a> <a href="/logout">Logout</a>
+               <% } %>
+            </div>
+            
             <h2>Quiz<span>: El juego de las preguntas y las respuestas</span></h2>
          </header>
          

@@ -27,12 +27,35 @@ header, nav, section {
    text-align: center;
 }
 
+header .login {
+   float: right;
+}
+
+header a:link, header a:visited {
+   float:left;
+   display: block;
+   width: 60px;
+   color: #FFFFFF;
+   background-color: darkgrey;
+   text-align: center;
+   padding: 5px;
+   text-decoration: none;
+}
+
+header a:hover, header a:active {
+   background-color: blueviolet;
+}
+
+#username:link, #username:visited, #username:hover, #username:active, {
+   background-color: blueviolet;
+}
+
 /* Mensajes de error de formularios en SECTIONS */
 
 #ErrorMsg {
    margin: 0px 10px 0px 0px;
    color: darkred;
-   font-size: smaler;
+   font-size: smaller;
 }
 
 
