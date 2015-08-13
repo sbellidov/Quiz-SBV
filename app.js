@@ -24,7 +24,11 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser('Quiz_SBV'));
-app.use(session());
+app.use(session({
+   secret: 'cookie-SBV',
+   resave: true,
+   saveUninitialized: true
+}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -38,12 +42,12 @@ app.use(function(req, res, next) {
    
    // Hacer visible req.session en las vistas
    res.locals.session = req.session;
+   console.log('Time: ' + new Date().toLocaleTimeString());
    next();
 
 });
    
 app.use('/', routes);
-//app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -54,8 +58,7 @@ app.use(function(req, res, next) {
 
 // error handlers
 
-// development error handler
-// will print stacktrace
+// development error handler will print stacktrace
 if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
@@ -67,8 +70,7 @@ if (app.get('env') === 'development') {
     });
 }
 
-// production error handler
-// no stacktraces leaked to user
+// production error handler no stacktraces leaked to user
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {

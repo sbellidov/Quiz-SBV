@@ -3,7 +3,9 @@
        id="preg"
        placeholder="Pregunta"
        name="quiz[pregunta]"
-       value="<%= quiz.pregunta %>"
+       <% if (quiz.pregunta !== "Pregunta") { %>
+         value="<%= quiz.pregunta %>"
+       <% } %>
 /><p>
 
 <input
@@ -11,7 +13,9 @@
        id="preg"
        placeholder="Respuesta"
        name="quiz[respuesta]"
-       value="<%= quiz.respuesta %>"
+       <% if (quiz.respuesta !== "Respuesta") { %>
+         value="<%= quiz.respuesta %>"
+       <% } %>
 /><p>
 
 <select name="quiz[tema]">

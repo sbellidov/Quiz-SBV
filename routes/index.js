@@ -37,6 +37,6 @@ router.get('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish',   sessionC
 // --- Session controller ---
 router.get  ('/login',     sessionController.new);       // Formulario login
 router.post ('/login',     sessionController.create);    // Crear sesión
-router.get  ('/logout',     sessionController.destroy);   // Destruir sessión
+router.get  ('/logout',    sessionController.destroy);   // Destruir sessión
 
 module.exports = router;
