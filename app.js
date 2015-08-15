@@ -42,11 +42,27 @@ app.use(function(req, res, next) {
    
    // Hacer visible req.session en las vistas
    res.locals.session = req.session;
-   console.log('Time: ' + new Date().toLocaleTimeString());
    next();
-
 });
+
+
+// Cierre automático de sesión trascurrido un tiempo de inactividad
+app.use(function(req, res, next){
+   var expiration = 2 * 60 * 1000   // 2 minutos x 60 segundos x 1000 milisegundos
+   var now = new Date().getTime();
    
+   if (req.session.user && req.session.lastAccess) {
+      var elapsedLastAccess = now - req.session.lastAccess;
+      if (elapsedLastAccess > expiration) {
+         delete req.session.user;
+         return res.render('sessions/expired',{errors: {}});
+      }
+   }
+   req.session.lastAccess = now;
+   next();
+});
+
+
 app.use('/', routes);
 
 // catch 404 and forward to error handler

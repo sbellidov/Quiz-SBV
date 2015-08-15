@@ -31,7 +31,8 @@
                <% if (!session.user) { %>
                   <a href="/login">Login</a>
                <% } else { %>
-                  <a href="" id="username"><%=session.user.username%></a> <a href="/logout">Logout</a>
+                  <a href="" id="username"><%=session.user.username%></a>
+                  <a href="/logout">Logout</a>
                <% } %>
             </div>
             
