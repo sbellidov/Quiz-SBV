@@ -50,6 +50,10 @@ header a:hover, header a:active {
    background-color: blueviolet;
 }
 
+h1 {
+   margin: 10px;
+}
+
 /* Mensajes de error de formularios en SECTIONS */
 
 #ErrorMsg {
@@ -93,6 +97,10 @@ select {
 table {
    text-align: center;
    margin: 0 auto;
+}
+
+td {
+   padding: 3px;
 }
 
 table a {

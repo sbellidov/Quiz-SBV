@@ -8,6 +8,11 @@ body {
    content: "Wide Layout";
 }
 
+#biografia {
+   margin-left: 20%;
+   margin-right: 20%;
+}
+
 
 /*--- Navegación ---*/
 nav {
@@ -22,8 +27,7 @@ nav {
 section {
    float: right;
    width: 80%;
-   /*height: 200px;*/
-   height: 75vh;
+   height: 400px;
 }
 
 
