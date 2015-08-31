@@ -67,3 +67,14 @@ exports.publish = function (req, res) {
       next(error);
    })
 };
+
+// DELETE /quizes/:quizId/comments/:commentId/delete
+exports.destroy = function (req, res) {
+   req.comment.destroy()
+   .then (
+      function(){res.redirect('/quizes/' + req.params.quizId);}
+   )
+   .catch(
+      function(){next(error);}
+   )
+};

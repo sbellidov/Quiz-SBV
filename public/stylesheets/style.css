@@ -54,6 +54,10 @@ h1 {
    margin: 10px;
 }
 
+p {
+   margin: 5px;
+}
+
 /* Mensajes de error de formularios en SECTIONS */
 
 #ErrorMsg {
@@ -70,12 +74,14 @@ input {
 }
 
 .form_button {
-   padding: 5px 7px;
+   padding: 2px 7px;
    margin: 2px;
    background-color: #eee;
    border: 1px solid black;
    border-radius: 5px;
    font-size: 15px;
+   text-decoration: none;
+   color: black;
 }
 
 .form_button:hover {
